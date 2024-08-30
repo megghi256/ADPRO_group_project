@@ -1,0 +1,10 @@
+# Example usage
+if __name__ == "__main__":
+    datasets_info = [
+        {'url': 'your_dataset_url_1', 'download_path': '/mnt/data/dataset1.csv'},
+        {'url': 'your_dataset_url_2', 'download_path': '/mnt/data/dataset2.csv'},
+        # Add more datasets as needed
+    ]
+    data_handler = MultiDataHandler(datasets_info)
+    for name, df in data_handler.dataframes.items():
+        print(f"Dataframe for {name}:", df.head())
